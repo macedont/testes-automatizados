@@ -17,7 +17,6 @@ func TestTiposDeEnderecos(t *testing.T) {
 		{"", "Tipo de Endereço inválido!"},
 		{"Praça dos Bandeirantes", "Tipo de Endereço inválido!"},
 		{"rua do jaumzinhu", "Rua"},
-		{"av2ida do Grau", "Estrada"},
 	}
 
 	for _, cenario := range cenariosDeTeste {
