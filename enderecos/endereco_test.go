@@ -1,6 +1,9 @@
-package enderecos
+package enderecos_test
 
-import "testing"
+import (
+	. "teste-automatizado/enderecos"
+	"testing"
+)
 
 type cenarioTeste struct {
 	enderecoInserido string
@@ -8,6 +11,8 @@ type cenarioTeste struct {
 }
 
 func TestTiposDeEnderecos(t *testing.T) {
+	t.Parallel()
+
 	cenariosDeTeste := []cenarioTeste{
 		{"Rua Abc", "Rua"},
 		{"Avenida das Hortas", "Avenida"},
@@ -25,5 +30,13 @@ func TestTiposDeEnderecos(t *testing.T) {
 			t.Errorf("O tipo de Endereço retornado está inválido! Esperava receber %s recebeu %s",
 				cenario.retornoEsperado, retornoRecebido)
 		}
+	}
+}
+
+func TestAleatorio(t *testing.T) {
+	t.Parallel() //chama os testes em paralelo
+
+	if 1 > 2 {
+		t.Error("Quebrou o teste.")
 	}
 }
